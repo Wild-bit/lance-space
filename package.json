@@ -1,0 +1,50 @@
+{
+  "name": "react-console-tel",
+  "version": "1.1.0",
+  "type": "module",
+  "description": " 基于 Vite + React + TypeScript + Ant Design + TailwindCSS",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "npm run build:${CF_BUILD_ENV:-testing}",
+    "build:testing": "tsc -b && vite build --mode testing",
+    "build:production": "tsc -b && vite build --mode production",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome check ./src --write",
+    "format": "biome format ./src --write",
+    "check": "biome check ./src",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
+    "@qlj/request": "^0.0.5",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.10",
+    "@tanstack/react-query": "^5.80.10",
+    "@types/node": "^24.0.3",
+    "antd": "^5.26.1",
+    "autoprefixer": "^10.4.21",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "enum-plus": "^2.3.3",
+    "lodash": "^4.17.21",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.10",
+    "tus-js-client": "^4.3.1",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@types/lodash": "^4.17.18",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+}
