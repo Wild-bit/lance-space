@@ -1,5 +1,6 @@
 {
   "name": "react-console-tel",
+  "private": true,
   "version": "1.1.0",
   "type": "module",
   "description": " 基于 Vite + React + TypeScript + Ant Design + TailwindCSS",
