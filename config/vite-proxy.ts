@@ -8,11 +8,11 @@ import type { ProxyOptions } from "vite";
 // 代理目标配置
 const proxyTargets = {
   // 开发环境（使用测试服务器）
-  dev: "https://admin-dsp-test.deepclick.com",
+  dev: "",
   // 测试环境
-  test: "https://admin-dsp-test.deepclick.com",
+  test: "",
   // 生产环境
-  prod: "https://admin-dsp.deepclick.com",
+  prod: "",
 };
 
 /**
@@ -21,7 +21,7 @@ const proxyTargets = {
  * @returns Vite 代理配置对象
  */
 export function createProxy(
-  env: keyof typeof proxyTargets = "test",
+  env: keyof typeof proxyTargets = "test"
 ): Record<string, string | ProxyOptions> {
   const target = proxyTargets[env];
 
@@ -38,7 +38,9 @@ export function createProxy(
         // 请求拦截
         proxy.on("proxyReq", (_proxyReq, req) => {
           console.log(
-            `🔄 [${env.toUpperCase()}] 代理请求: ${req.method} ${req.url} -> ${options.target}${req.url}`,
+            `🔄 [${env.toUpperCase()}] 代理请求: ${req.method} ${req.url} -> ${
+              options.target
+            }${req.url}`
           );
         });
 
@@ -47,7 +49,7 @@ export function createProxy(
           const status = proxyRes.statusCode || 0;
           const icon = status >= 200 && status < 300 ? "✅" : "❌";
           console.log(
-            `${icon} [${env.toUpperCase()}] 代理响应: ${status} ${req.url}`,
+            `${icon} [${env.toUpperCase()}] 代理响应: ${status} ${req.url}`
           );
         });
 
@@ -55,7 +57,7 @@ export function createProxy(
         proxy.on("error", (err, req) => {
           console.error(
             `❌ [${env.toUpperCase()}] 代理错误: ${req.url}`,
-            err.message,
+            err.message
           );
         });
       },
@@ -86,7 +88,7 @@ export function createProxy(
  * 根据环境变量获取代理配置
  */
 export function getProxyByEnv(
-  proxyEnv = "test",
+  proxyEnv = "test"
 ): Record<string, string | ProxyOptions> {
   console.log(`🚀 代理环境: ${proxyEnv}`);
 

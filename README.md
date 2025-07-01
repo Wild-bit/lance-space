@@ -1,11 +1,6 @@
-# DSP 管理系统
+# React 管理系统 框架模版
 
 基于 Vite + React + TypeScript + Ant Design + TailwindCSS 构建的现代化管理系统
-
-- 测试环境：https://admin-h5-deepclick-test.qiliangjia.org/
-- 生产环境：https://admin-h5.deepclick.com
-
-- 后端接口：https://app.apifox.com/project/5213900
 
 ## 技术栈
 
@@ -23,7 +18,7 @@
 ## 项目结构
 
 ```
-qlj-dsp-admin/
+react-console-tel/
 ├── config/                       # vite 配置文件
 ├── public/                       # 静态资源
 ├── scripts/                      # 构建脚本
