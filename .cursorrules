@@ -4,7 +4,7 @@
 技术栈：Vite 5 + React 18 + TypeScript 5 + Ant Design 5 + TailwindCSS
 包管理：pnpm 8.x
 版本：1.1.0
-项目初始化方式：`pnpm create vite@latest qlj-dsp-admin -- --template react-ts`
+项目初始化方式：`pnpm create vite@latest mis-react-tel -- --template react-ts`
 
 # 核心架构原则
 1. 类型安全第一：所有 API 交互必须有完整 TypeScript 类型定义
@@ -142,7 +142,7 @@ const UserCard: React.FC<UserCardProps> = ({ userId, onSelect }) => {
 
 目录结构
 
-qlj-dsp-admin/
+mis-react-tel/
 ├── config/                       # vite 配置文件
 ├── public/                       # 静态资源
 ├── scripts/                      # 构建脚本

@@ -1,5 +1,5 @@
-const TOKEN_KEY = "dsp_admin_token";
-const USER_INFO_KEY = "dsp_admin_user_info";
+const TOKEN_KEY = "lance_admin_token";
+const USER_INFO_KEY = "lance_admin_user_info";
 
 /**
  * 获取token

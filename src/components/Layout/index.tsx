@@ -23,7 +23,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   const userInfo = getUserInfo();
   const [collapsed, setCollapsed] = useState(false);
   const [currentTime, setCurrentTime] = useState(
-    dayjs().format("YYYY-MM-DD HH:mm:ss"),
+    dayjs().format("YYYY-MM-DD HH:mm:ss")
   );
 
   // 定时更新时间
@@ -38,9 +38,8 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   // 水印内容
   const watermarkContent = useMemo(() => {
     // 构建用户标识
-    const userName = userInfo?.name || "DSP-Admin";
-    const userId =
-      userInfo?.union_id || userInfo?.id || "";
+    const userName = userInfo?.name || "Lacne";
+    const userId = userInfo?.union_id || userInfo?.id || "";
     const userIdentifier = userId ? `${userName}-${userId}` : userName;
 
     return [userIdentifier, currentTime];
@@ -120,9 +119,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
           {!collapsed ? (
             <div className="flex items-center">
               <img className="w-8 h-8 mr-2" src="/favicon.svg" alt="logo" />
-              <h1 className="text-lg font-semibold text-gray-800 m-0">
-                DSP-Admin
-              </h1>
+              <h1 className="text-lg font-semibold text-gray-800 m-0">Lance</h1>
             </div>
           ) : (
             <img className="w-8 h-8" src="/favicon.svg" alt="logo" />

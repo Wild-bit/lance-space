@@ -1,19 +1,17 @@
 import { Button } from "antd";
 import type React from "react";
-import { useEffect } from "react";
-import { useAuthStore } from "@/modules/common/common.store";
+// import { useEffect } from "react";
+// import { useAuthStore } from "@/modules/common/common.store";
 
 const Login: React.FC = () => {
-  const { loading, feishuAuthUrl, fetchFeishuAuthUrl, redirectToFeishu } =
-    useAuthStore();
+  // const { loading, feishuAuthUrl, fetchFeishuAuthUrl, redirectToFeishu } =
+  //   useAuthStore();
 
-  useEffect(() => {
-    fetchFeishuAuthUrl(location.origin);
-  }, [fetchFeishuAuthUrl]);
+  // useEffect(() => {
+  //   fetchFeishuAuthUrl(location.origin);
+  // }, [fetchFeishuAuthUrl]);
 
-  const handleLogin = () => {
-    redirectToFeishu();
-  };
+  const handleLogin = () => {};
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -21,7 +19,7 @@ const Login: React.FC = () => {
         {/* Logo 和标题 */}
         <div className="flex justify-center items-center mb-8">
           <img className="w-15 h-15 mr-3" src="/favicon.svg" alt="logo" />
-          <span className="text-2xl font-bold text-gray-800">DSP-Admin</span>
+          <span className="text-2xl font-bold text-gray-800">Lance-Admin</span>
         </div>
 
         {/* 登录按钮 */}
@@ -30,17 +28,12 @@ const Login: React.FC = () => {
             type="primary"
             size="large"
             onClick={handleLogin}
-            loading={loading}
+            // loading={loading}
             className="w-full h-12 text-lg"
-            disabled={!feishuAuthUrl}
+            // disabled={!feishuAuthUrl}
           >
-            飞书登录
+            登录
           </Button>
-        </div>
-
-        {/* 底部说明 */}
-        <div className="text-center mt-6 text-sm text-gray-500">
-          使用飞书账号登录系统
         </div>
       </div>
     </div>

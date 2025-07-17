@@ -3,7 +3,7 @@ import type { UploadFile, UploadProps } from "antd";
 import { message, Upload } from "antd";
 import type React from "react";
 import { apiClient } from "@/services/client";
-import type { CreativeImage } from "../../modules/creative/creative.types";
+// import type { CreativeImage } from "../../modules/creative/creative.types";
 
 interface ImageUploadProps {
   label: string;
