@@ -1,15 +1,13 @@
-import { Button } from "antd";
+import { Button, Form, Input } from "antd";
 import type React from "react";
-// import { useEffect } from "react";
+import { useState } from "react";
 // import { useAuthStore } from "@/modules/common/common.store";
 
 const Login: React.FC = () => {
   // const { loading, feishuAuthUrl, fetchFeishuAuthUrl, redirectToFeishu } =
   //   useAuthStore();
 
-  // useEffect(() => {
-  //   fetchFeishuAuthUrl(location.origin);
-  // }, [fetchFeishuAuthUrl]);
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {};
 
@@ -24,11 +22,29 @@ const Login: React.FC = () => {
 
         {/* 登录按钮 */}
         <div className="text-center">
+          <Form layout="vertical">
+            <Form.Item
+              name="username"
+              required
+              label="用户名"
+              rules={[{ required: true, message: "请输入用户名" }, { min: 6 }]}
+            >
+              <Input className="h-12" placeholder="请输入用户名" />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              required
+              label="密码"
+              rules={[{ required: true, message: "请输入密码" }, { min: 6 }]}
+            >
+              <Input.Password className="h-12" placeholder="请输入密码" />
+            </Form.Item>
+          </Form>
           <Button
             type="primary"
             size="large"
             onClick={handleLogin}
-            // loading={loading}
+            loading={loading}
             className="w-full h-12 text-lg"
             // disabled={!feishuAuthUrl}
           >
