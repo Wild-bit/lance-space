@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 背景和前景色 - 使用 RGB 格式支持 TailwindCSS 透明度修饰符 */
+    --lance-background: 255 255 255; /* 白色背景 rgb(255, 255, 255) */
+    --lance-foreground: 15 23 42; /* 深蓝灰色文字 rgb(15, 23, 42) */
+
+    /* 卡片相关 - 支持透明度变化 */
+    --lance-card: 255 255 255; /* 卡片背景 rgb(255, 255, 255) */
+    --lance-card-foreground: 15 23 42; /* 卡片文字 rgb(15, 23, 42) */
+
+    /* 弹出层相关 - 支持透明度变化 */
+    --lance-popover: 255 255 255; /* 弹出层背景 rgb(255, 255, 255) */
+    --lance-popover-foreground: 15 23 42; /* 弹出层文字 rgb(15, 23, 42) */
+
+    /* 主色调 - 关键修复：支持 hover:bg-primary/90 等透明度效果 */
+    --lance-primary: 11 25 38; /* 蓝色主色 rgb(11,25,38) #0B1926 */
+    --lance-primary-foreground: 248 250 252; /* 主色上的文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 次要色调 - 支持透明度变化 */
+    --lance-secondary: 241 245 249; /* 浅灰蓝色 rgb(241, 245, 249) #f1f5f9 */
+    --lance-secondary-foreground: 15 23 42; /* 次要色上的文字 rgb(15, 23, 42) #0f172a */
+
+    /* 静音色调 - 支持透明度变化 */
+    --lance-muted: 241 245 249; /* 静音背景 rgb(241, 245, 249) #f1f5f9 */
+    --lance-muted-foreground: 100 116 139; /* 静音文字 rgb(100, 116, 139) #64748b */
+
+    /* 强调色调 - 支持透明度变化 */
+    --lance-accent: 241 245 249; /* 强调背景 rgb(241, 245, 249) #f1f5f9 */
+    --lance-accent-foreground: 15 23 42; /* 强调文字 rgb(15, 23, 42) #0f172a */
+
+    /* 危险色调 - 支持透明度变化 */
+    --lance-destructive: 239 68 68; /* 红色危险色 rgb(239, 68, 68) #ef4444 */
+    --lance-destructive-foreground: 248 250 252; /* 危险色上的文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 边框和输入框 - 支持透明度变化 */
+    --lance-border: 226 232 240; /* 边框颜色 rgb(226, 232, 240) #e2e8f0 */
+    --lance-input: 226 232 240; /* 输入框边框 rgb(226, 232, 240) #e2e8f0 */
+    --lance-ring: 59 130 246; /* 焦点环颜色 rgb(59, 130, 246) #3b82f6 */
+
+    /* 圆角大小 */
+    --lance-radius: 0.5rem;
+  }
+
+  .dark {
+    /* 暗色主题 - 使用 RGB 格式支持 TailwindCSS 透明度修饰符 */
+    --lance-background: 15 23 42; /* 深色背景 rgb(15, 23, 42) #0f172a */
+    --lance-foreground: 248 250 252; /* 浅色文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 卡片相关 - 支持透明度变化 */
+    --lance-card: 15 23 42; /* 深色卡片背景 rgb(15, 23, 42) #0f172a */
+    --lance-card-foreground: 248 250 252; /* 卡片浅色文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 弹出层相关 - 支持透明度变化 */
+    --lance-popover: 15 23 42; /* 深色弹出层背景 rgb(15, 23, 42) #0f172a */
+    --lance-popover-foreground: 248 250 252; /* 弹出层浅色文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 主色调 - 关键修复：支持 hover:bg-primary/90 等透明度效果 */
+    --lance-primary: 96 165 250; /* 亮蓝色主色 rgb(96, 165, 250) #60a5fa */
+    --lance-primary-foreground: 15 23 42; /* 主色上的深色文字 rgb(15, 23, 42) #0f172a */
+
+    /* 次要色调 - 支持透明度变化 */
+    --lance-secondary: 30 41 59; /* 深灰蓝色 rgb(30, 41, 59) #1e293b */
+    --lance-secondary-foreground: 248 250 252; /* 次要色上的浅色文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 静音色调 - 支持透明度变化 */
+    --lance-muted: 30 41 59; /* 深色静音背景 rgb(30, 41, 59) #1e293b */
+    --lance-muted-foreground: 148 163 184; /* 静音浅色文字 rgb(148, 163, 184) #94a3b8 */
+
+    /* 强调色调 - 支持透明度变化 */
+    --lance-accent: 30 41 59; /* 深色强调背景 rgb(30, 41, 59) #1e293b */
+    --lance-accent-foreground: 248 250 252; /* 强调浅色文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 危险色调 - 支持透明度变化 */
+    --lance-destructive: 220 38 38; /* 深红色危险色 rgb(220, 38, 38) #dc2626 */
+    --lance-destructive-foreground: 248 250 252; /* 危险色上的浅色文字 rgb(248, 250, 252) #f8fafc */
+
+    /* 边框和输入框 - 支持透明度变化 */
+    --lance-border: 30 41 59; /* 深色边框 rgb(30, 41, 59) #1e293b */
+    --lance-input: 30 41 59; /* 深色输入框边框 rgb(30, 41, 59) #1e293b */
+    --lance-ring: 147 197 253; /* 浅蓝色焦点环 rgb(147, 197, 253) #93c5fd */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

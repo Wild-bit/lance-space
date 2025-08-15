@@ -1,0 +1,109 @@
+/**
+ * Input 组件样式模块
+ * 基于原生 HTML input 元素的输入框组件样式
+ */
+
+/* 基础输入框样式 */
+.input {
+  @apply flex h-10 w-full rounded-md border border-input;
+  @apply bg-background px-3 py-2 text-sm;
+  @apply ring-offset-background;
+  @apply transition-colors duration-200;
+}
+
+/* 文件上传样式 */
+.input::file-selector-button {
+  @apply border-0 bg-transparent text-sm font-medium;
+  @apply cursor-pointer;
+}
+
+/* 占位符样式 */
+.input::placeholder {
+  @apply text-muted-foreground;
+}
+
+/* 焦点状态 */
+.input:focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2;
+}
+
+/* 禁用状态 */
+.input:disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+/* 只读状态 */
+.input:read-only {
+  @apply bg-muted cursor-default;
+}
+
+/* 错误状态 */
+.input.error {
+  @apply border-destructive ring-destructive/20;
+}
+
+.input.error:focus-visible {
+  @apply ring-destructive;
+}
+
+/* 成功状态 */
+.input.success {
+  @apply border-green-500 ring-green-500/20;
+}
+
+.input.success:focus-visible {
+  @apply ring-green-500;
+}
+
+/* 尺寸变体 */
+.input.small {
+  @apply h-8 px-2 py-1 text-xs;
+}
+
+.input.large {
+  @apply h-12 px-4 py-3 text-base;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .input {
+    @apply h-11 px-3 py-2.5;
+  }
+  
+  .input.small {
+    @apply h-9 px-2.5 py-1.5;
+  }
+  
+  .input.large {
+    @apply h-13 px-4 py-3.5;
+  }
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+  .input {
+    @apply border-input/50;
+  }
+  
+  .input:focus-visible {
+    @apply border-input;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .input {
+    @apply border-2;
+  }
+  
+  .input:focus-visible {
+    @apply ring-4;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .input {
+    @apply transition-none;
+  }
+}

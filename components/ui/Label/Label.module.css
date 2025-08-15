@@ -1,0 +1,97 @@
+/**
+ * Label 组件样式模块
+ * 基于 Radix UI Label 构建的标签组件样式
+ */
+
+/* 基础标签样式 */
+.label {
+  @apply text-sm font-medium leading-none;
+  @apply cursor-pointer;
+  @apply transition-colors duration-200;
+}
+
+/* 禁用状态 */
+.label.disabled {
+  @apply cursor-not-allowed opacity-70;
+}
+
+/* 当关联的输入框被禁用时 */
+.label:has(+ :disabled),
+.label:has(+ * :disabled) {
+  @apply cursor-not-allowed opacity-70;
+}
+
+/* 错误状态 */
+.label.error {
+  @apply text-destructive;
+}
+
+/* 必填标记 */
+.label.required::after {
+  content: ' *';
+  @apply text-destructive;
+}
+
+/* 尺寸变体 */
+.label.small {
+  @apply text-xs;
+}
+
+.label.large {
+  @apply text-base font-semibold;
+}
+
+/* 样式变体 */
+.label.secondary {
+  @apply text-muted-foreground font-normal;
+}
+
+.label.muted {
+  @apply text-muted-foreground/70 font-normal;
+}
+
+/* 悬停效果 */
+.label:hover:not(.disabled) {
+  @apply text-foreground/80;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .label {
+    @apply text-xs;
+  }
+  
+  .label.large {
+    @apply text-sm;
+  }
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+  .label.secondary {
+    @apply text-muted-foreground/90;
+  }
+  
+  .label.muted {
+    @apply text-muted-foreground/60;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .label {
+    @apply font-semibold;
+  }
+  
+  .label.secondary,
+  .label.muted {
+    @apply font-medium;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .label {
+    @apply transition-none;
+  }
+}
