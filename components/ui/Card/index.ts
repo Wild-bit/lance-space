@@ -10,7 +10,7 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
-} from './Card';
+} from "./Card";
 
 export type {
   CardProps,
@@ -19,6 +19,6 @@ export type {
   CardDescriptionProps,
   CardContentProps,
   CardFooterProps,
-} from './Card';
+} from "./Card";
 
-export { Card as default } from './Card';
+export { Card as default } from "./Card";
