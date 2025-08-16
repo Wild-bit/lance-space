@@ -1,6 +1,6 @@
-# Lance React 管理系统
+# Lance React 个人空间
 
-基于 Next.js + React + TypeScript + TailwindCSS 构建的现代化管理系统框架
+基于 Next.js + React + TypeScript + TailwindCSS 构建的现代化个人空间框架
 
 ## 技术栈
 
