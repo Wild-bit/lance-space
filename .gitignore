@@ -107,6 +107,8 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+.trae
 
 # Local env files
 *.local
+

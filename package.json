@@ -1,6 +1,5 @@
 {
   "name": "lance-space",
-  "private": true,
   "version": "1.1.0",
   "description": "基于 Next.js + React + TypeScript + shadcn/ui + TailwindCSS 的个人空间",
   "scripts": {

@@ -5,8 +5,8 @@
 ## 技术栈
 
 - **框架**: Next.js 15.x
-- **前端库**: React 19.1.*
-- **开发语言**: TypeScript 5.8.*
+- **前端库**: React 19.1.\*
+- **开发语言**: TypeScript 5.8.\*
 - **样式框架**: TailwindCSS 4.1.10
 - **状态管理**: Zustand 5.0.5
 - **HTTP 客户端**: Axios 1.10.0
@@ -47,41 +47,43 @@ lance-space/
 ├── package.json            # 项目依赖
 ├── pnpm-lock.yaml          # 依赖锁定文件
 ├── postcss.config.js       # PostCSS 配置
-├── scripts/                # 构建脚本
-│   └── build-cf.ts         # Cloudflare 构建脚本
 ├── tailwind.config.js      # TailwindCSS 配置
 ├── tsconfig.json           # TypeScript 配置
 └── types/                  # 类型定义
     └── global.d.ts         # 全局类型声明
 ```
 
-
 ## 核心特性
 
 ### 1. 现代化架构
+
 - Next.js App Router 架构
 - 服务端渲染 (SSR) 支持
 - 静态站点生成 (SSG) 支持
 - API Routes 集成
 
 ### 2. 类型安全
+
 - 完整的 TypeScript 类型定义
 - 严格的类型检查
 - 组件 Props 类型安全
 
 ### 3. 组件化设计
+
 - 模块化 UI 组件库
 - CSS Modules 样式隔离
 - 可复用组件架构
 - 响应式设计支持
 
 ### 4. 开发体验
+
 - 热重载开发环境
 - Biome 代码格式化和检查
 - 统一的编码风格
 - Git 提交规范
 
 ### 5. 样式系统
+
 - TailwindCSS 实用类优先
 - CSS Modules 样式隔离
 - 深色主题支持
@@ -112,18 +114,18 @@ pnpm dev
 pnpm build
 ```
 
-
-
 ## 开发规范
 
 ### 组件开发规范
 
 1. **组件结构**
+
    - 每个组件使用独立文件夹
    - 包含 `.tsx`、`.module.css`、`index.ts` 文件
    - 使用 TypeScript 严格类型检查
 
 2. **样式规范**
+
    - 优先使用 TailwindCSS 实用类
    - 复杂样式使用 CSS Modules
    - 支持深色主题和响应式设计
@@ -136,11 +138,13 @@ pnpm build
 ### 页面开发规范
 
 1. **App Router 结构**
+
    - 使用 `app/` 目录结构
    - 页面文件命名为 `page.tsx`
    - 布局文件命名为 `layout.tsx`
 
 2. **API Routes**
+
    - API 路由放在 `app/api/` 目录
    - 使用 Next.js 13+ 的新 API 格式
    - 支持 GET、POST、PUT、DELETE 方法
@@ -181,6 +185,7 @@ pnpm format
 # 类型检查
 pnpm type-check
 ```
+
 ## 部署
 
 ### 本地构建
@@ -202,55 +207,40 @@ pnpm export
 
 ### 部署平台
 
-- **Vercel**: 推荐部署平台，零配置部署
-- **Netlify**: 支持静态站点和 Serverless 函数
-- **Cloudflare Pages**: 使用 `scripts/build-cf.ts` 脚本
 - **传统服务器**: 使用 `pnpm start` 启动 Node.js 服务
 
 ## 项目特色
 
 ### 🎨 现代化 UI 组件
+
 - 基于 CSS Modules 的样式隔离
 - 支持深色主题切换
 - 完整的响应式设计
 - 无障碍访问支持
 
 ### 🚀 开发体验
+
 - TypeScript 严格类型检查
 - 热重载开发环境
 - 代码自动格式化
 - Git 提交规范检查
 
 ### 📱 多端适配
+
 - 移动端友好设计
 - 平板设备优化
 - 桌面端完整体验
 
 ### ⚡ 性能优化
+
 - Next.js 自动代码分割
 - 图片自动优化
 - 字体优化加载
 - 构建产物压缩
-
-## 贡献指南
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'feat: add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
+<!--
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 联系方式
-
-如有问题或建议，请通过以下方式联系：
-
-- 提交 [Issue](https://github.com/your-username/lance-space/issues)
-- 发送邮件至：your-email@example.com
-
----
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。 -->
 
 ⭐ 如果这个项目对你有帮助，请给它一个 Star！
